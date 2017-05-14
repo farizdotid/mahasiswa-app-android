@@ -42,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         mContext = this;
-        mApiService = UtilsApi.getAPIService();
+        mApiService = UtilsApi.getAPIService(); // meng-init yang ada di package apihelper
         initComponents();
     }
 
@@ -74,17 +74,19 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                         if (response.isSuccessful()){
-                            Log.i("debug", "onResponse: BERHASIL");
                             loading.dismiss();
                             try {
                                 JSONObject jsonRESULTS = new JSONObject(response.body().string());
                                 if (jsonRESULTS.getString("error").equals("false")){
+                                    // Jika login berhasil maka data nama yang ada di response API
+                                    // akan diparsing ke activity selanjutnya.
                                     Toast.makeText(mContext, "BERHASIL LOGIN", Toast.LENGTH_SHORT).show();
                                     String nama = jsonRESULTS.getJSONObject("user").getString("nama");
                                     Intent intent = new Intent(mContext, MainActivity.class);
                                     intent.putExtra("result_nama", nama);
                                     startActivity(intent);
                                 } else {
+                                    // Jika login gagal
                                     String error_message = jsonRESULTS.getString("error_msg");
                                     Toast.makeText(mContext, error_message, Toast.LENGTH_SHORT).show();
                                 }
@@ -94,7 +96,6 @@ public class LoginActivity extends AppCompatActivity {
                                 e.printStackTrace();
                             }
                         } else {
-                            Log.i("debug", "onResponse: GA BERHASIL");
                             loading.dismiss();
                         }
                     }

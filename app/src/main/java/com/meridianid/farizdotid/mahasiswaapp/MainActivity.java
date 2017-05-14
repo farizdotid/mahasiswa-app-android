@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
         initComponents();
 
+        // untuk mendapatkan data dari activity sebelumnya, yaitu activity login.
         Bundle extras = getIntent().getExtras();
         if (extras != null)
             resultNama = extras.getString("result_nama");
