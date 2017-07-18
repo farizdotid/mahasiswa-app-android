@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_gradient"
-    tools:context="com.meridianid.farizdotid.mahasiswaapp.LoginActivity">
+    tools:context="com.meridianid.farizdotid.mahasiswaapp.activity.LoginActivity">
 
 
     <LinearLayout
