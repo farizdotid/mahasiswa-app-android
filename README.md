@@ -4,6 +4,7 @@ Sample Project Login, Register, Retrofit2
 Feature on this project :
 - Login connect to API
 - Register connect to API
+- Session Login Logout
 
 I build API use simple PHP, you can view project API in https://github.com/farizdotid/api-mahasiswa-farizdotid .
 
