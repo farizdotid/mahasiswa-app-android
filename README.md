@@ -12,5 +12,5 @@ App Screenshot :
 <p align="center">
   <img src="https://raw.githubusercontent.com/farizdotid/mahasiswa-app/master/screenshot/device-2017-05-13-224616.png" width="250" height="400" />
    <img src="https://raw.githubusercontent.com/farizdotid/mahasiswa-app/master/screenshot/device-2017-05-13-224648.png" width="250" height="400" />
-   <img src="https://raw.githubusercontent.com/farizdotid/mahasiswa-app/master/screenshot/device-2017-05-13-224708.png" width="250" height="400" />
+   <img src="https://raw.githubusercontent.com/farizdotid/mahasiswa-app-android/master/screenshot/device-2017-07-18-214836.png" width="250" height="400" />
 </p>
