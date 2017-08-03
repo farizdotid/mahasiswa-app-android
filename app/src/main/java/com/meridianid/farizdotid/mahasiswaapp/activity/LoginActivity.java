@@ -67,6 +67,8 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        // Code berikut berfungsi untuk mengecek session, Jika session true ( sudah login )
+        // maka langsung memulai MainActivity.
         if (sharedPrefManager.getSPSudahLogin()){
             startActivity(new Intent(LoginActivity.this, MainActivity.class)
                     .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="16dp"
+    android:paddingRight="8dp"
+    android:paddingLeft="8dp"
+    android:orientation="vertical"
+    tools:context="com.meridianid.farizdotid.mahasiswaapp.activity.MatkulActivity">
+
+    <Button
+        android:id="@+id/btnTambahMatkul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="tambah matkul"/>
+
+    <TextView
+        android:id="@+id/tvBelumMatkul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"
+        android:text="Belum mengambil mata kuliah, Silahkan tambahkan terlebih dahulu"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvMatkul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

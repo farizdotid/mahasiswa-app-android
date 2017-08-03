@@ -19,6 +19,10 @@ public class MainActivity extends AppCompatActivity {
     TextView tvResultNama;
     @BindView(R.id.btnLogout)
     Button btnLogout;
+    @BindView(R.id.btnLihatDosen)
+    Button btnLihatDosen;
+    @BindView(R.id.btnLihatMatkul)
+    Button btnLihatMatkul;
 
     SharedPrefManager sharedPrefManager;
 
@@ -39,6 +43,20 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, LoginActivity.class)
                     .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
                 finish();
+            }
+        });
+
+        btnLihatDosen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, DosenActivity.class));
+            }
+        });
+
+        btnLihatMatkul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, MatkulActivity.class));
             }
         });
     }
