@@ -6,6 +6,7 @@ import com.meridianid.farizdotid.mahasiswaapp.model.ResponseMatkul;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
+import retrofit2.http.DELETE;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -45,4 +46,7 @@ public interface BaseApiService {
     @POST("matkul")
     Call<ResponseBody> simpanMatkulRequest(@Field("nama_dosen") String namadosen,
                                            @Field("matkul") String namamatkul);
+
+    @DELETE("matkul/{idmatkul}")
+    Call<ResponseBody> deteleMatkul(@Path("idmatkul") String idmatkul);
 }

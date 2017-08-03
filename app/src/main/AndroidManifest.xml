@@ -22,7 +22,8 @@
         <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.DosenActivity" />
         <activity android:name=".activity.MatkulActivity" />
-        <activity android:name=".activity.TambahMatkulActivity"></activity>
+        <activity android:name=".activity.TambahMatkulActivity" />
+        <activity android:name=".activity.MatkulDetailActivity"></activity>
     </application>
 
 </manifest>

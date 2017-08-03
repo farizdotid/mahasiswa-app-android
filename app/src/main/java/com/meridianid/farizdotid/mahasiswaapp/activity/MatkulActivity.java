@@ -17,6 +17,8 @@ import com.meridianid.farizdotid.mahasiswaapp.R;
 import com.meridianid.farizdotid.mahasiswaapp.adapter.MatkulAdapter;
 import com.meridianid.farizdotid.mahasiswaapp.model.ResponseMatkul;
 import com.meridianid.farizdotid.mahasiswaapp.model.SemuamatkulItem;
+import com.meridianid.farizdotid.mahasiswaapp.util.Constant;
+import com.meridianid.farizdotid.mahasiswaapp.util.RecyclerItemClickListener;
 import com.meridianid.farizdotid.mahasiswaapp.util.api.BaseApiService;
 import com.meridianid.farizdotid.mahasiswaapp.util.api.UtilsApi;
 
@@ -84,6 +86,8 @@ public class MatkulActivity extends AppCompatActivity {
                         final List<SemuamatkulItem> semuamatkulItems = response.body().getSemuamatkul();
                         rvMatkul.setAdapter(new MatkulAdapter(mContext, semuamatkulItems));
                         matkulAdapter.notifyDataSetChanged();
+
+                        initDataIntent(semuamatkulItems);
                     }
                 } else {
                     loading.dismiss();
@@ -97,5 +101,22 @@ public class MatkulActivity extends AppCompatActivity {
                 Toast.makeText(mContext, "Koneksi internet bermasalah", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void initDataIntent(final List<SemuamatkulItem> matkulList){
+        rvMatkul.addOnItemTouchListener(
+                new RecyclerItemClickListener(mContext, new RecyclerItemClickListener.OnItemClickListener() {
+                    @Override public void onItemClick(View view, int position) {
+                        String id = matkulList.get(position).getId();
+                        String namadosen = matkulList.get(position).getNamaDosen();
+                        String matkul = matkulList.get(position).getMatkul();
+
+                        Intent detailMatkul = new Intent(mContext, MatkulDetailActivity.class);
+                        detailMatkul.putExtra(Constant.KEY_ID_MATKUL, id);
+                        detailMatkul.putExtra(Constant.KEY_NAMA_DOSEN, namadosen);
+                        detailMatkul.putExtra(Constant.KEY_MATKUL, matkul);
+                        startActivity(detailMatkul);
+                    }
+                }));
     }
 }
