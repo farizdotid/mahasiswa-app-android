@@ -10,7 +10,7 @@ Feature on this project :
 - Add data Matkul Database
 - Delete Matkul by id API
 
-I build API use Slim Framework, you can view project API in https://github.com/farizdotid/api-mahasiswa-farizdotid .
+I build API use Slim Framework, you can view project API in https://github.com/farizdotid/API-Mahasiswa .
 
 App Screenshot :
 <p align="center">
