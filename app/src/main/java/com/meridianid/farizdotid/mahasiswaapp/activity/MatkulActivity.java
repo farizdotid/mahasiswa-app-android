@@ -67,7 +67,7 @@ public class MatkulActivity extends AppCompatActivity {
         btnTambahMatkul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MatkulActivity.this, TambahMatkulActivity.class));
+                startActivity(new Intent(MatkulActivity.this, TambahMatkulActivity2.class));
             }
         });
     }

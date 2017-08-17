@@ -58,7 +58,8 @@ public class TambahMatkulActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectedName = parent.getItemAtPosition(position).toString();
-                requestDetailDosen(selectedName);
+//                requestDetailDosen(selectedName);
+                Toast.makeText(mContext, "Kamu memilih dosen " + selectedName, Toast.LENGTH_SHORT).show();
             }
 
             @Override
